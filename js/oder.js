@@ -141,6 +141,7 @@ function submit() {
     price = document.getElementById('price').value
     import_date = document.getElementById('import_date').value
     status = document.getElementById('status').value
+    console.log(index)
     let newData = {
         "customer": customer,
         "address": address,
@@ -152,7 +153,7 @@ function submit() {
         "import_date": import_date,
         "status": status
     }
-    oders.fill(newData, index, index + 1)
+    oders[index] = newData
     x = JSON.stringify(oders)
     window.localStorage.setItem('dataOder', x)
     createTable()
@@ -170,11 +171,13 @@ function editItem(index) {
     document.getElementById('address').value = item.address
     document.getElementById('telephone-number').value = item.telephoneNumber
     document.getElementById('birthday').value = item.birthday
-    document.getElementById('name').valuer = item.name
+    document.getElementById('name').value = item.name
     document.getElementById('amount').value = item.quantily
     document.getElementById('price').value = item.price
     document.getElementById('import_date').value = item.import_date
     document.getElementById('status').value = item.status
+    document.getElementById('update').hidden = false;
+    document.getElementById('save').hidden = true;
     localStorage.setItem('id1', index)
 }
 

@@ -7,7 +7,6 @@
 //     "amount": 5,
 //     "import_date": '22/07/2021',
 // }, ]
-localStorage.clear()
 
 function createData() {
     if (localStorage.getItem('data') == null) {

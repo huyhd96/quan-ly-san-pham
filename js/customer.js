@@ -8,7 +8,7 @@
 function createData() {
     if (localStorage.getItem('dataOder') == null) {
         return oders = [{
-            "address": "Nguyễn Văn A",
+            "customer": "Nguyễn Văn A",
             "address": "ngõ 195 Trần Cung, Cổ Nhuế, Hà Nội",
             "telephoneNumber": '0966123456',
             "birthday": '13 / 08 / 1992',
@@ -25,7 +25,7 @@ function createTable() {
     for (let i = 0; i < oders.length; i++) {
         html += '<tr>';
         html += '<td>'
-        html += oders[i].address
+        html += oders[i].customer
         html += '</td>'
         html += '<td>'
         html += oders[i].address
@@ -75,7 +75,7 @@ function submit() {
     let newData = {
         "customer": customer,
         "address": address,
-        "retail_price": telephoneNumber,
+        "telephoneNumber": telephoneNumber,
         "birthday": birthday,
         "name": oders[index].name,
         "price": oders[index].price,
@@ -99,7 +99,7 @@ function editItem(index) {
     let item = oders[index]
     document.getElementById('customer').value = item.customer
     document.getElementById('address').value = item.address
-    document.getElementById('telephoneNumber').value = item.retail_price
+    document.getElementById('telephoneNumber').value = item.telephoneNumber
     document.getElementById('birthday').value = item.birthday
     localStorage.setItem('id1', index)
 }
