@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../css/table.css'>
+    <link rel="stylesheet" href="../css/toolbar.css">
+    <script src="https://kit.fontawesome.com/7f19932c66.js" crossorigin="anonymous"></script>
+    <script src="../js/test.js"></script>
+    <title>Product</title>
+</head>
+
+<body>
+    <div class="toolbar">
+        <nav>
+            <ul>
+                <div id='logo'>
+                    <img src="../static/logo.png">
+                    <h3> YOROZURA</h3>
+                </div>
+                <li><a href='../index.html'>TỔNG QUAN</a></li>
+                <li><a href='product.html'>SẢN PHẨM</a></li>
+                <li>
+                    <a href='warehouse.html'>KHO HÀNG</a></li>
+                <li><a href='oder.html '>ĐƠN HÀNG</a></li>
+                <li><a href='customer.html '>KHÁCH HÀNG</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <table id='myTable'>
+            <thead>
+                <div class="titleHeader">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>DANH SÁCH SẢN PHẨM</span>
+                </div>
+                <input type="text" id="myInput" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
+                <th>Mã sản phầm</th>
+                <th>Tên sản phầm</th>
+                <th> Giá bán lẻ</th>
+                <th>Tình trạng</th>
+                <th></th>
+            </thead>
+            <tbody id='products'></tbody>
+        </table>
+        <dialog class="myDialog" id="myDialog">
+            <div class='dialogContent'>
+                <div class='form'>
+                    <div id="textfiel">
+                        <label>Nhập mã sản phẩm</label>
+                        <input id="code" placeholder="nhập tên sản phẩm">
+                    </div>
+                    <div id="textfiel">
+                        <label>Nhập tên sản phẩm</label>
+                        <input id="name" placeholder="nhập tên sản phẩm">
+                    </div>
+                </div>
+                <div class='form'>
+                    <div id="textfiel">
+                        <label>Nhập giá bán lẻ</label>
+                        <input type="number" id="price2" placeholder="nhập giá bán lẻ">
+                    </div>
+                    <div id="textfiel">
+                        <label>Nhập số lượng</label>
+                        <input type="number" id="quantily" placeholder="nhập số lượng">
+                    </div>
+                </div>
+                <div class='form'>
+                    <button id='save' onclick="submit()">Submit</button>
+                    <button id='cancel' onclick="cancel()">Cancel</button>
+                </div>
+            </div>
+        </dialog>
+    </div>
+    <script src="../js/products.js"></script>
+</body>
+
+</html>

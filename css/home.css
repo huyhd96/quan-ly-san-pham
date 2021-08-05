@@ -1,0 +1,46 @@
+body {
+    background-color: #bebebe;
+    margin: 0;
+}
+
+.map {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.item1 {
+    padding: 24px;
+    background-color: #4caf50;
+    text-align: center;
+    color: #fff;
+}
+
+.item2 {
+    padding: 24px;
+    background-color: #2196F3;
+    text-align: center;
+    color: #fff;
+}
+
+.item3 {
+    padding: 24px;
+    background-color: #fb8c00;
+    text-align: center;
+    color: #fff;
+}
+
+.item4 {
+    padding: 24px;
+    background-color: #a1887f;
+    text-align: center;
+    color: #fff;
+}
+
+.container {
+    padding: 12px;
+    margin: 24px auto;
+    background-color: #fafafa;
+    width: 80%;
+}

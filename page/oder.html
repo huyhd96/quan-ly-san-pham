@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../css/table.css'>
+    <link rel="stylesheet" href="../css/toolbar.css">
+    <script src="https://kit.fontawesome.com/7f19932c66.js" crossorigin="anonymous"></script>
+    <title>Product</title>
+</head>
+
+<body>
+    <div class="toolbar">
+        <nav>
+            <ul>
+                <div id='logo'>
+                    <img src="../static/logo.png">
+                    <h3> YOROZURA</h3>
+                </div>
+                <li><a href='index.html'>TỔNG QUAN</a></li>
+                <li><a href='product.html'>SẢN PHẨM</a></li>
+                <li>
+                    <a href='warehouse.html'>KHO HÀNG</a></li>
+                <li><a href='oder.html '>ĐƠN HÀNG</a></li>
+                <li><a href='customer.html '>KHÁCH HÀNG</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="pageHeader">
+            <i class="fas fa-shopping-cart"></i>
+            <span>DANH SÁCH ĐƠN HÀNG</span>
+        </div>
+        <table id='myTable'>
+            <thead>
+                <button class='addNew' onclick="showDialog()">Thêm mới</button>
+                <input type="text" id="myInput" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
+                <th>Khách hàng</th>
+                <th>Ngày chốt đơn</th>
+                <th>Tên sản phầm</th>
+                <th> Giá bán</th>
+                <th>Số lượng</th>
+                <th>Tổng giá trị</th>
+                <th>Tình trạng</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody id='oders'></tbody>
+        </table>
+        <dialog class="myDialog" id='myDialog'>
+            <div class='dialogContent'>
+                <div class="form">
+                    <div id="textfiel">
+                        <label>Tên khách hàng</label>
+                        <input id="customer" placeholder="nhập tên khách hàng">
+                    </div>
+                    <div id="textfiel">
+                        <label>Địa chỉ</label>
+                        <input id="address" placeholder="nhập địa chỉ">
+                    </div>
+                    <div id="textfiel">
+                        <label>SĐT</label>
+                        <input id="telephone-number" placeholder="Nhập số điện thoại">
+                    </div>
+                </div>
+                <div class="form">
+                    <div id="textfiel">
+                        <label>Ngày/tháng/năm sinh</label>
+                        <input type="date" id="birthday" placeholder="nhập ngày tháng năm sinh">
+                    </div>
+                    <div id="textfiel">
+                        <label>Nhập tên sản phẩm</label>
+                        <input id="name" placeholder="tên sản phẩm">
+                    </div>
+                    <div id="textfiel">
+                        <label>Ngày chốt đơn</label>
+                        <input type="date" id="import_date" placeholder="nhập ngày chốt đơn">
+                    </div>
+                </div>
+                <div class="form">
+                    <div id="textfiel">
+                        <label>Số lượng nhập</label>
+                        <input id="amount" placeholder="nhập số lượng">
+                    </div>
+                    <div id="textfiel">
+                        <label>Giá bán</label>
+                        <input id="price" placeholder="Lượng hàng tồn kho">
+                    </div>
+                    <div id='textfiel'>
+                        <label>Tình trạng</label>
+                        <select id="status">
+                        <option value="Đang giao">Đang giao</option>
+                        <option value="Đã giao">Đã giao</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form">
+                    <button id='save' onclick="save()">Save</button>
+                    <button id='update' onclick="save()" hidden>Submit</button>
+                    <button id='cancel' onclick="cancel()">Cancel</button>
+                </div>
+            </div>
+        </dialog>
+    </div>
+    <script src="../js/oder.js"></script>
+</body>
+
+</html>

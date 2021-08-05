@@ -1,0 +1,50 @@
+.toolbar {
+    width: 100%;
+    background-color: #33CCFF;
+}
+
+.chart {
+    margin: 0 auto;
+    height: 65%;
+    width: 80%;
+    background-color: #fff;
+}
+
+#logo {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 90px;
+    overflow: hidden;
+}
+
+nav {
+    text-align: right;
+    padding: 20px;
+}
+
+h3 {
+    color: white;
+    padding: 11px;
+    text-decoration: none;
+    font-family: arial;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 8px;
+    padding-top: 1px;
+}
+
+nav li a {
+    color: white;
+    padding: 11px;
+    text-decoration: none;
+    font-family: arial;
+}
+
+nav li a:hover {
+    background-color: white;
+    color: #233647;
+}
